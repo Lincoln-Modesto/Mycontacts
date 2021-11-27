@@ -18,7 +18,7 @@ class ContactController{
 
         if(!contact){
             //Not found
-            return response.status(404).json({error: 'user not found'})
+            return response.status(404).json({error: 'Contact not found'})
         }
 
         response.json(contact)
@@ -42,7 +42,7 @@ class ContactController{
             {name, phone, email, category_id}
         )
 
-        response.json(contact)
+        response.status(201).json(contact)
     }
 
     async update(request, response){
@@ -53,7 +53,7 @@ class ContactController{
         const contactExists = await ContactRepository.findByID(id);
         if(!contactExists){
             //Not found
-            return response.status(404).json({error: 'user not found'});
+            return response.status(404).json({error: 'Contact not found'});
         };
 
         
