@@ -12,7 +12,6 @@ class ContactServices {
         return this.HttpClient.get(`/contacts?orderBy=${orderBy}`);
     }
 
-
 }
 
 export default new ContactServices();
