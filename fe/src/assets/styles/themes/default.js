@@ -9,7 +9,8 @@ const theme = {
         },
         gray:{
             900: '#222222',
-            200: '#BCBCBC'
+            200: '#BCBCBC',
+            100: '#E5E5E5'
         },
         danger:{
             light: '#F97171',
